@@ -9,7 +9,10 @@ public class SurvivalCPP : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[]
-			{ "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG", "Slate", "SlateCore", "CommonUI" });
+		{
+			"Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG", "Slate", "SlateCore", "CommonUI",
+			"ALSV4_CPP"
+		});
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });
 
