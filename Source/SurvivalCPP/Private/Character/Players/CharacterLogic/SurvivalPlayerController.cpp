@@ -2,8 +2,8 @@
 
 
 #include "SurvivalCPP/Public/Character/Players/CharacterLogic/SurvivalPlayerController.h"
-
-#include "MainUILayout.h"
+#include "SurvivalCPP/Public/UI/MainUILayout.h"
+#include "SurvivalCPP/Public/UI/HUD/DefaultHUDLayout.h"
 
 
 void ASurvivalPlayerController::BeginPlay()
@@ -29,7 +29,7 @@ void ASurvivalPlayerController::RenderPlayerHUD()
 {
 	UMainUILayout* MainUILayoutRef = NewObject<UMainUILayout>(this);
 	MainUILayoutRef->AddToViewport();
-	// MainUILayoutRef->PushDefaultHUDLayout(MainUILayoutRef, );
+	MainUILayoutRef->PushDefaultHUDLayout(MainUILayoutRef, UDefaultHUDLayout);
 }
 
 void ASurvivalPlayerController::SwitchIsLocalPlayerController()

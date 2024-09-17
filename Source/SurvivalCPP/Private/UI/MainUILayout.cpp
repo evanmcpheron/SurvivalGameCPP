@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "SurvivalCPP/Public/MainUILayout.h"
+#include "SurvivalCPP/Public/UI/MainUILayout.h"
 
 void UMainUILayout::PushDefaultHUDLayout(UCommonActivatableWidgetStack* Target,
                                          TSubclassOf<UCommonActivatableWidget> DefaultLayout)
