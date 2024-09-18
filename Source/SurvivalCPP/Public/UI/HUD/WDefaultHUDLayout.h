@@ -4,13 +4,13 @@
 
 #include "CoreMinimal.h"
 #include "CommonActivatableWidget.h"
-#include "DefaultHUDLayout.generated.h"
+#include "WDefaultHUDLayout.generated.h"
 
 /**
  * 
  */
 UCLASS(Blueprintable)
-class  UDefaultHUDLayout : public UCommonActivatableWidget
+class  UWDefaultHUDLayout : public UCommonActivatableWidget
 {
 	GENERATED_BODY()
 	
