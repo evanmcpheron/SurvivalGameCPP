@@ -2,5 +2,3 @@
 
 
 #include "SurvivalCPP/Public/Character/Players/CharacterLogic/SurvivalPlayerController.h"
-#include "SurvivalCPP/Public/UI/WMainUILayout.h"
-#include "SurvivalCPP/Public/UI/HUD/WDefaultHUDLayout.h"
