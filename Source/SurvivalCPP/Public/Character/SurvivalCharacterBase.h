@@ -3,20 +3,19 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Character/ALSCharacter.h"
 #include "AbilitySystemInterface.h"
-#include "GameFramework/PlayerState.h"
-#include "SurvivalPlayerState.generated.h"
+#include "SurvivalCharacterBase.generated.h"
 
 class UAbilitySystemComponent;
 class UAttributeSet;
 
 UCLASS()
-class SURVIVALCPP_API ASurvivalPlayerState : public APlayerState, public IAbilitySystemInterface
+class SURVIVALCPP_API ASurvivalCharacterBase : public AALSCharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
 public:
-	ASurvivalPlayerState();
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 	UAttributeSet* GetAttributeSet() const { return AttributeSet; }
 
