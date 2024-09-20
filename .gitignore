@@ -32,6 +32,7 @@
 .vscode
 # VSCode History Files
 **/.history
+*.zip
 
 #################################
 # Miscellaneous Generated Files #
