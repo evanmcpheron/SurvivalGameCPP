@@ -6,6 +6,11 @@
 #include "AbilitySystemComponent.h"
 #include "Character/Players/CharacterLogic/SurvivalPlayerState.h"
 
+ASurvivalPlayerCharacter::ASurvivalPlayerCharacter(const FObjectInitializer& ObjectInitializer)
+	: Super(ObjectInitializer)
+{
+}
+
 void ASurvivalPlayerCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
@@ -25,7 +30,6 @@ void ASurvivalPlayerCharacter::OnRep_PlayerState()
 void ASurvivalPlayerCharacter::InitAbilityActorInfo()
 {
 	ASurvivalPlayerState* SurvivalPlayerState = GetPlayerState<ASurvivalPlayerState>();
-
 	check(SurvivalPlayerState);
 	SurvivalPlayerState->GetAbilitySystemComponent()->InitAbilityActorInfo(SurvivalPlayerState, this);
 	AbilitySystemComponent = SurvivalPlayerState->GetAbilitySystemComponent();

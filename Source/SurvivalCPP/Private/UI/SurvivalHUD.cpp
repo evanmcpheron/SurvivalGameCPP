@@ -2,7 +2,6 @@
 
 
 #include "UI/SurvivalHUD.h"
-
 #include "UI/SurvivalUserWidget.h"
 #include "UI/WidgetController/OverlayWidgetController.h"
 
@@ -18,7 +17,7 @@ UOverlayWidgetController* ASurvivalHUD::GetOverlayWidgetController(const FWidget
 	return OverlayWidgetController;
 }
 
-void ASurvivalHUD::InitOverlay(APlayerController* PC, APlayerState* PS)
+void ASurvivalHUD::InitOverlay(APlayerController* PC, APlayerState* PS, UAbilitySystemComponent* ASC, UAttributeSet* AS)
 {
 	checkf(OverlayWidgetClass, TEXT("OverlayWidgetClass is uninitialized, please fill out BP_SurvivalHUD"));
 	checkf(OverlayWidgetControllerClass,
@@ -28,7 +27,7 @@ void ASurvivalHUD::InitOverlay(APlayerController* PC, APlayerState* PS)
 	UUserWidget* Widget = CreateWidget<UUserWidget>(GetWorld(), OverlayWidgetClass);
 	OverlayWidget = Cast<USurvivalUserWidget>(Widget);
 
-	const FWidgetControllerParams WidgetControlerParams(PC, PS);
+	const FWidgetControllerParams WidgetControlerParams(PC, PS, ASC, AS);
 	UOverlayWidgetController* WidgetController = GetOverlayWidgetController(WidgetControlerParams);
 
 	OverlayWidget->SetWidgetController(WidgetController);

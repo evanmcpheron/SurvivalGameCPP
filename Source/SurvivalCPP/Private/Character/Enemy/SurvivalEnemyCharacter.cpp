@@ -5,13 +5,15 @@
 
 #include "AbilitySystem/SurvivalAbilitySystemComponent.h"
 
+
 void ASurvivalEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
 	AbilitySystemComponent->InitAbilityActorInfo(this, this);
 }
 
-ASurvivalEnemyCharacter::ASurvivalEnemyCharacter()
+ASurvivalEnemyCharacter::ASurvivalEnemyCharacter(const FObjectInitializer& ObjectInitializer)
+	: Super(ObjectInitializer)
 {
 	AbilitySystemComponent = CreateDefaultSubobject<USurvivalAbilitySystemComponent>("AbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);

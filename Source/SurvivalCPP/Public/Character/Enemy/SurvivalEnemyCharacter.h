@@ -12,7 +12,7 @@ class SURVIVALCPP_API ASurvivalEnemyCharacter : public ASurvivalCharacterBase
 	GENERATED_BODY()
 
 public:
-	ASurvivalEnemyCharacter();
+	ASurvivalEnemyCharacter(const FObjectInitializer& ObjectInitializer);
 
 protected:
 	virtual void BeginPlay() override;

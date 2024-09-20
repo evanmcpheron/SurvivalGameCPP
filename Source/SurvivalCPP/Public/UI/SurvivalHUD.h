@@ -6,6 +6,8 @@
 #include "GameFramework/HUD.h"
 #include "SurvivalHUD.generated.h"
 
+class UAttributeSet;
+class UAbilitySystemComponent;
 class UOverlayWidgetController;
 class USurvivalUserWidget;
 struct FWidgetControllerParams;
@@ -21,7 +23,7 @@ public:
 
 	UOverlayWidgetController* GetOverlayWidgetController(const FWidgetControllerParams& WCParams);
 
-	void InitOverlay(APlayerController* PC, APlayerState* PS);
+	void InitOverlay(APlayerController* PC, APlayerState* PS, UAbilitySystemComponent* ASC, UAttributeSet* AS);
 
 protected:
 

@@ -7,4 +7,6 @@ void USurvivalWidgetController::SetWidgetControllerParams(const FWidgetControlle
 {
 	PlayerController = WCParams.PlayerController;
 	PlayerState = WCParams.PlayerState;
+	AbilitySystemComponent = WCParams.AbilitySystemComponent;
+	AttributeSet = WCParams.AttributeSet;
 }
